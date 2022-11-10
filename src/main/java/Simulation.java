@@ -5,7 +5,7 @@ public class Simulation {
     public Bins bin = new Bins(2, 12);
 
     public static void main(String[] args) {
-        Simulation sim = new Simulation(2, 10000000);
+        Simulation sim = new Simulation(2, 1000000);
         sim.runSimulation();
         sim.printSimulation();
     }
@@ -26,10 +26,12 @@ public class Simulation {
     }
 
     public void printSimulation() {
-        System.out.println(***);
-        System.out.println("Simulation");
+        System.out.println("***");
+        System.out.println("Simulation of " + numOfDice + " dice tossed for " + numOfSims + " times.");
+        System.out.println("***");
+        System.out.println(" ");
         for (int i = 2; i <= 12; i++) {
-            System.out.println(String.format("%2s : %10s : %.2f %% of total", i, bin.getBin(i).toString(), bin.getBinPercentToal(i)));
+            System.out.println(String.format("%2s : %10s : %.2f %% of total : %s", i, bin.getBin(i).toString(), bin.getBinPercentTotal(i), bin.printBinPercentToStarts(i)));
         }
     }
 

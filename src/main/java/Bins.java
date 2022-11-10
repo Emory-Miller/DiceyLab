@@ -23,8 +23,17 @@ public class Bins {
         return theBins.get(binNumber);
     }
 
-    public Float getBinPercentToal(final Integer binNumber){
+    public Float getBinPercentTotal(final Integer binNumber){
         return (theBins.get(binNumber) / (float) totalIncrements);
+    }
+
+    public String printBinPercentToStarts(final Integer binNumber){
+        int percent = (int) (getBinPercentTotal(binNumber)*100);
+        String astericks = "";
+        for (int i = 1; i<=percent; i++){
+            astericks = astericks + "*";
+        }
+        return astericks;
     }
 
     public Integer numberofBins(){

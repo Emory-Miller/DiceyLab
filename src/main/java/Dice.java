@@ -1,10 +1,7 @@
 import java.util.Random;
-import java.lang.Math;
 
 public class Dice {
 
-    public int numOfRolls;
-    public int numOfSides;
     public int numOfDice;
 
     public Dice(int numOfDice) {
