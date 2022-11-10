@@ -31,7 +31,7 @@ public class Simulation {
         System.out.println("***");
         System.out.println(" ");
         for (int i = 2; i <= 12; i++) {
-            System.out.println(String.format("%2s : %10s : %.2f %% of total : %s", i, bin.getBin(i).toString(), bin.getBinPercentTotal(i), bin.printBinPercentToStarts(i)));
+            System.out.println(String.format("%3s : %10s : %.2f : %s", i, bin.getBin(i).toString(), bin.getBinPercentTotal(i), bin.printBinPercentToStarts(i)));
         }
     }
 
